@@ -1,7 +1,5 @@
 <h1>投稿する</h1>
-
- <%# <%= form_with(model: @post, url: posts_path, local: true) do |f| %>  %>
- <%= form_with(model: @post, url: posts_path, local: true) do |f| %>
+ <%= form_with(model: @post, local: true) do |f| %>
   <div class="label">
     <%= f.label :content %>
   </div>
