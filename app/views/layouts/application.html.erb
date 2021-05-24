@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Posts0523</title>
+    <title>投稿App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <header>
+      <ul class="header-menus">
+        <li>
+          <%= link_to "投稿App", "/" %>
+        </li>
+        <li>
+          <%= link_to("投稿一覧", posts_path ) %>
+        </li>
+        <li>
+          <%= link_to("新規投稿", new_post_path ) %>
+        </li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>

@@ -1,3 +1,23 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  color: white;
+  padding-left: 15px;
+}
+
+body {
+  color: #333333;
+  background-color: #F0F8FF;
+  font-family: monospace;
+}
+
+input[type="text"] {
+  width: 400px;
+  height: 100px;
+}
