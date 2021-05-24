@@ -1,13 +1,15 @@
 <h1>投稿一覧</h1>
 <table>
   <tr>
-    <th>投稿内容</th>
-    <th>投稿日時</th>
+    <th>内容</th>
+    <th>日時</th>
+    <th>編集</th>
   </tr>
 <% @posts.each do |post|  %>
   <tr>
     <td><%= post.content %></td>
-    <td><%= post.created_at %></td>>
+    <td><%= post.created_at %></td>
+    <td><%= link_to "○", edit_post_path(post.id) %></td>
   </tr>
 <% end %>
 </table>
