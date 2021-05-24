@@ -5,7 +5,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
+    if params[:back]
+      render :new
+    elsif
+       @post.save
       redirect_to posts_path
     else
       render :new
@@ -21,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find_by(id :params[:id])
+    @post = Post.find_by(id: params[:id])
     if @post.update(post_params)
       redirect_to posts_path, notice: "投稿を編集しました！"
     else
@@ -33,6 +36,10 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     redirect_to posts_path, notice:"投稿を削除しました！"
+  end
+
+  def confirm
+    @post = Post.new(post_params)
   end
 
   private
